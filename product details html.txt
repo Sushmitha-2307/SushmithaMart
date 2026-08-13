@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - SushmithaMart</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #FAF8F3;
+            color: #1A1E27;
+        }
+
+        nav {
+            background: #16233F;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .product-details {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            gap: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .image {
+            width: 45%;
+            min-height: 350px;
+            background: #F1EEE4;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 120px;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h1 {
+            color: #16233F;
+            font-size: 32px;
+        }
+
+        .category,
+        .seller {
+            color: #667085;
+        }
+
+        .rating {
+            color: #E8A33D;
+            font-size: 18px;
+        }
+
+        .price {
+            color: #16233F;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .stock {
+            color: #2F9E44;
+            font-weight: bold;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .quantity button {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #ddd;
+            background: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .quantity span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .cart-btn {
+            background: #E8A33D;
+            color: #16233F;
+        }
+
+        .back-btn {
+            background: #16233F;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+
+            .product-details {
+                flex-direction: column;
+            }
+
+            .image {
+                width: 100%;
+                min-height: 250px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <h2>🛒 SushmithaMart</h2>
+
+    <div>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="product-details">
+
+        <div class="image">
+            🍚
+        </div>
+
+
+        <div class="info">
+
+            <p class="category">
+                Category: Grocery
+            </p>
+
+            <h1>
+                Basmati Rice
+            </h1>
+
+            <p class="seller">
+                Seller: FreshMart Seller
+            </p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.5
+            </p>
+
+            <p class="price">
+                ₹120
+            </p>
+
+            <p class="stock">
+                ✓ In Stock
+            </p>
+
+            <p>
+                Premium quality Basmati Rice suitable
+                for everyday cooking and special meals.
+            </p>
+
+
+            <div class="quantity">
+
+                <button onclick="decrease()">
+                    -
+                </button>
+
+                <span id="quantity">
+                    1
+                </span>
+
+                <button onclick="increase()">
+                    +
+                </button>
+
+            </div>
+
+
+            <button
+                class="btn cart-btn"
+                onclick="addToCart()">
+
+                Add to Cart
+
+            </button>
+
+
+            <a
+                href="products.html"
+                class="btn back-btn">
+
+                Back to Products
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    let quantity = 1;
+
+
+    function increase() {
+
+        quantity++;
+
+        document.getElementById("quantity")
+            .innerText = quantity;
+
+    }
+
+
+    function decrease() {
+
+        if (quantity > 1) {
+
+            quantity--;
+
+            document.getElementById("quantity")
+                .innerText = quantity;
+        }
+
+    }
+
+
+    function addToCart() {
+
+        alert(
+            "Basmati Rice added to cart successfully!"
+        );
+
+    }
+
+</script>
+
+</body>
+</html>
