@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SushmithaMart - Products</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #FAF8F3;
+            color: #1A1E27;
+        }
+
+        nav {
+            background: #16233F;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 40px auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .heading h1 {
+            color: #16233F;
+        }
+
+        .search {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #E7E1D3;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            height: 150px;
+            background: #F1EEE4;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .product h3 {
+            color: #16233F;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #16233F;
+        }
+
+        .rating {
+            color: #E8A33D;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .details {
+            background: #16233F;
+            color: white;
+        }
+
+        .cart {
+            background: #E8A33D;
+            color: #16233F;
+        }
+
+        @media (max-width: 800px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <h2>🛒 SushmithaMart</h2>
+
+    <div>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="home.html">Logout</a>
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    <div class="heading">
+
+        <h1>Explore Products</h1>
+
+        <p>Find the products you need</p>
+
+    </div>
+
+
+    <input
+        class="search"
+        type="text"
+        placeholder="🔍 Search products..."
+    >
+
+
+    <div class="products">
+
+
+        <!-- PRODUCT 1 -->
+
+        <div class="product">
+
+            <div class="product-image">
+                🍚
+            </div>
+
+            <h3>Basmati Rice</h3>
+
+            <p>Category: Grocery</p>
+
+            <p>Seller: FreshMart</p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.5
+            </p>
+
+            <p class="price">
+                ₹120
+            </p>
+
+            <a
+                class="btn details"
+                href="product-details.html">
+
+                View Details
+
+            </a>
+
+            <a
+                class="btn cart"
+                href="cart.html">
+
+                Add to Cart
+
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="product">
+
+            <div class="product-image">
+                ☕
+            </div>
+
+            <h3>Coffee Powder</h3>
+
+            <p>Category: Grocery</p>
+
+            <p>Seller: DailyNeeds</p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐ 4.4
+            </p>
+
+            <p class="price">
+                ₹180
+            </p>
+
+            <a
+                class="btn details"
+                href="product-details.html">
+
+                View Details
+
+            </a>
+
+            <a
+                class="btn cart"
+                href="cart.html">
+
+                Add to Cart
+
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product">
+
+            <div class="product-image">
+                👕
+            </div>
+
+            <h3>T-Shirt</h3>
+
+            <p>Category: Fashion</p>
+
+            <p>Seller: StyleHub</p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐⭐ 4.5
+            </p>
+
+            <p class="price">
+                ₹399
+            </p>
+
+            <a
+                class="btn details"
+                href="product-details.html">
+
+                View Details
+
+            </a>
+
+            <a
+                class="btn cart"
+                href="cart.html">
+
+                Add to Cart
+
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product">
+
+            <div class="product-image">
+                🎧
+            </div>
+
+            <h3>Headphones</h3>
+
+            <p>Category: Electronics</p>
+
+            <p>Seller: TechWorld</p>
+
+            <p class="rating">
+                ⭐⭐⭐⭐ 4.4
+            </p>
+
+            <p class="price">
+                ₹799
+            </p>
+
+            <a
+                class="btn details"
+                href="product-details.html">
+
+                View Details
+
+            </a>
+
+            <a
+                class="btn cart"
+                href="cart.html">
+
+                Add to Cart
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</body>
+</html>
